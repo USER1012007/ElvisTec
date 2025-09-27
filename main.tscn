@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://cepxcm7ebet73"]
+
+[ext_resource type="Script" uid="uid://bhvo7bepxf7vh" path="res://main.gd" id="1_ig7tw"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_ig7tw")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

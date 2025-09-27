@@ -44,8 +44,8 @@ func load_metadata(path: String) -> void:
 	if not FileAccess.file_exists(path):
 		push_warning("[StateManager] No se encontró metadata en %s" % path)
 		return
-	var file = FileAccess.open(path, FileAccess.READ)
-	var data = JSON.parse_string(file.get_as_text())
+	var file: FileAccess = FileAccess.open(path, FileAccess.READ)
+	var data: Dictionary = JSON.parse_string(file.get_as_text())
 	if typeof(data) == TYPE_DICTIONARY:
 		metadata = data
 		print_debug("[StateManager] Metadata cargada:", metadata)

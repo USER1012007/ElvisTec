@@ -4,7 +4,7 @@ extends Node
 @onready var label: Label = $Label
 
 func _ready():
-	print("Main: [Main] Escena iniciada")
+	print_debug("Main: [Main] Escena iniciada")
 
 	state_manager.zoom_changed.connect(_on_zoom_changed)
 	state_manager.tiles_changed.connect(_on_tiles_changed)
@@ -19,8 +19,8 @@ func _input(event):
 			state_manager.set_zoom(state_manager.zoom_level - 1)
 
 func _on_zoom_changed(new_zoom: int) -> void:
-	print("[Main] Zoom cambiado a:", new_zoom)
+	print_debug("[Main] Zoom cambiado a:", new_zoom)
 	label.text = "Zoom: %d" % new_zoom
 
 func _on_tiles_changed(tiles: Array) -> void:
-	print("[Main] Tiles visibles:", tiles)
+	print_debug("[Main] Tiles visibles:", tiles)

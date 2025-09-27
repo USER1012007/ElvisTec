@@ -16,7 +16,7 @@ var metadata := {
 }
 
 func _ready():
-	print("state_manager.gd: [StateManager] inicializado")
+	print_debug("state_manager.gd: [StateManager] inicializado")
 
 func set_zoom(value: int) -> void:
 	value = clamp(value, 0, metadata.get("max_zoom", 4))
@@ -48,6 +48,6 @@ func load_metadata(path: String) -> void:
 	var data = JSON.parse_string(file.get_as_text())
 	if typeof(data) == TYPE_DICTIONARY:
 		metadata = data
-		print("[StateManager] Metadata cargada:", metadata)
+		print_debug("[StateManager] Metadata cargada:", metadata)
 	else:
 		push_error("[StateManager] Error leyendo metadata")

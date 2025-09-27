@@ -1,1 +1,3 @@
-res://state_manager.gd
+res://main.tscn
+res://backend/state_manager.gd
+res://main.gd

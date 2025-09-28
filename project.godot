@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [autoload]
 
 state_manager="*res://backend/state_manager.gd"
+tile_manager="*res://backend/tile_manager.gd"

@@ -7,7 +7,7 @@ func _ready():
 	print_debug("Main: [Main] Escena iniciada")
 
 	state_manager.zoom_changed.connect(_on_zoom_changed)
-	state_manager.tiles_changed.connect(_on_tiles_changed)
+	tile_manager.tiles_changed.connect(_on_tiles_changed)
 
 	state_manager.set_zoom(1)
 

@@ -1,4 +1,4 @@
-res://backend/state_manager.gd
-res://backend/tile_manager.gd
 res://main.tscn
+res://backend/tile_manager.gd
 res://main.gd
+res://backend/state_manager.gd

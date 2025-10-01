@@ -2,10 +2,15 @@ extends Node
 
 @onready var camera: Camera3D = $Camera3D
 @onready var label: Label = $Label
+@onready var state_manager: Node = $"/root/state_manager"
+@onready var tile_manager: Node = $"/root/tile_manager"
 
 func _ready():
 	print_debug("Main: [Main] Escena iniciada")
 
+	state_manager.set_tile_manager(tile_manager)
+	tile_manager.set_state_manager(state_manager)
+	
 	state_manager.zoom_changed.connect(_on_zoom_changed)
 	tile_manager.tiles_changed.connect(_on_tiles_changed)
 

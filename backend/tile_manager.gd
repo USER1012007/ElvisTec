@@ -1,10 +1,10 @@
 extends Node
 
-signal dataset_changed(new_dataset: String)
 signal tiles_changed(tiles: Array)
 
 var dataset: String = "default" 
 var visible_tiles: Array = []
+var state_manager: Node = null
 
 var metadata := {
 	"max_zoom": 40,
@@ -25,11 +25,9 @@ func request_tiles_refresh() -> void:
 	]
 	emit_signal("tiles_changed", visible_tiles)
 
-func set_dataset(value: String) -> void:
-	if dataset != value:
-		dataset = value
-		request_tiles_refresh()
-
+func set_state_manager(manager: Node) -> void:
+	state_manager = manager
+	
 func load_metadata(path: String) -> void:
 	if not FileAccess.file_exists(path):
 		push_warning("[TileManager] No se encontró metadata en %s" % path)

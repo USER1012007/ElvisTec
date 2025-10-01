@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://5i16ushsqe5v"]
+
+[ext_resource type="Script" uid="uid://bubt43gelp8kk" path="res://frontend/main_scene.gd" id="1_6hmje"]
+[ext_resource type="Script" uid="uid://dqmlev43wydi" path="res://frontend/menu.gd" id="2_ivsrt"]
+
+[node name="MainScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6hmje")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 7
+theme_override_constants/margin_top = 7
+theme_override_constants/margin_right = 7
+theme_override_constants/margin_bottom = 7
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 25
+text = "Menu
+"
+
+[node name="Popup" type="Popup" parent="."]
+oversampling_override = 1.0
+size = Vector2i(166, 146)
+visible = true
+script = ExtResource("2_ivsrt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Popup/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Menu"
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="comentario" type="Button" parent="Popup/VBoxContainer"]
+layout_mode = 2
+text = "Ingresar comentario"
+
+[node name="salir" type="Button" parent="Popup/VBoxContainer"]
+layout_mode = 2
+text = "Salir de la app"
+
+[node name="volver" type="Button" parent="Popup/VBoxContainer"]
+layout_mode = 2
+text = "volver"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer/comentario" to="Popup" method="_on_comentario_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer/salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer/volver" to="Popup" method="_on_volver_pressed"]

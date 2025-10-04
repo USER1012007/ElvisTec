@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://ccqhnkceafusp"]
+
+[ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_xn7oe"]
+[ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_ksmih"]
+[ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_jwv7x"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_58u7j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ksmih"]
+albedo_texture = SubResource("CompressedTexture2D_58u7j")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xn7oe"]
+albedo_texture = ExtResource("1_xn7oe")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="mars_27" type="CSGSphere3D" parent="."]
+visible = false
+radius = 67.79
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_ksmih")
+
+[node name="mars_9_ktx" type="CSGSphere3D" parent="."]
+radius = 67.79
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_xn7oe")
+script = ExtResource("2_ksmih")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.36162463, 0.5480061, -0.7542658, 0, 0.809017, 0.58778524, 0.93232375, -0.21255761, 0.29256046, -174.60971, 107.36345, 47.93875)
+script = ExtResource("3_jwv7x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
+light_energy = 3.0

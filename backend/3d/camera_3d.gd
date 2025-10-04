@@ -17,4 +17,13 @@ func _process(_delta):
 		self.position.y += 0.5
 	if Input.is_action_pressed("camera_down"):
 		self.position.y -= 0.5
-		
+	if Input.is_action_just_released("planetas_acercar_zoom"):
+		if self.fov > 10:
+			self.fov -= 1
+		else:
+			self.fov -= 0.5
+	if Input.is_action_just_released("planetas_alejar_zoom"):
+		if self.fov > 10:
+			self.fov += 1
+		else:
+			self.fov += 0.5

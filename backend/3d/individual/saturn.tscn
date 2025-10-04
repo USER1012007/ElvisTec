@@ -1,10 +1,23 @@
-[gd_scene load_steps=4 format=3 uid="uid://bek1xhvu5vgyx"]
+[gd_scene load_steps=8 format=3 uid="uid://bek1xhvu5vgyx"]
 
-[ext_resource type="Texture2D" uid="uid://djxf5wn10f7n1" path="res://assets/8k_saturn.jpg" id="1_x1yfm"]
+[ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="1_x1yfm"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="2_dnlbt"]
+[ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_dnlbt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4khw"]
 albedo_texture = ExtResource("1_x1yfm")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b4khw"]
+panorama = ExtResource("3_dnlbt")
+
+[sub_resource type="Sky" id="Sky_0sf2h"]
+sky_material = SubResource("PanoramaSkyMaterial_b4khw")
+
+[sub_resource type="Environment" id="Environment_utexb"]
+background_mode = 2
+sky = SubResource("Sky_0sf2h")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="saturn" type="Node3D"]
 
@@ -23,3 +36,6 @@ script = ExtResource("2_dnlbt")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 3.0
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_utexb")

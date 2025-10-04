@@ -1,11 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://b55cg32scrk5b"]
+[gd_scene load_steps=9 format=3 uid="uid://b55cg32scrk5b"]
 
 [ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_3co4n"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_vnqrh"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_v1rdc"]
+[ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_vnqrh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4xq6"]
 albedo_texture = ExtResource("1_3co4n")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_v1rdc"]
+panorama = ExtResource("4_vnqrh")
+
+[sub_resource type="Sky" id="Sky_f1yhb"]
+sky_material = SubResource("PanoramaSkyMaterial_v1rdc")
+
+[sub_resource type="Environment" id="Environment_nuxp6"]
+background_mode = 2
+sky = SubResource("Sky_f1yhb")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Mars" type="Node3D"]
 
@@ -27,3 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 3.0
 
 [node name="Label3D" type="Label3D" parent="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_nuxp6")

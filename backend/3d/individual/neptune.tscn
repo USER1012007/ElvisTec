@@ -1,11 +1,24 @@
-[gd_scene load_steps=5 format=3 uid="uid://bcpc5poh3pby5"]
+[gd_scene load_steps=9 format=3 uid="uid://bcpc5poh3pby5"]
 
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="1_gxxb6"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_xg433"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_12fef"]
+[ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_xg433"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sde0x"]
 albedo_texture = ExtResource("1_gxxb6")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_12fef"]
+panorama = ExtResource("4_xg433")
+
+[sub_resource type="Sky" id="Sky_sde0x"]
+sky_material = SubResource("PanoramaSkyMaterial_12fef")
+
+[sub_resource type="Environment" id="Environment_o462q"]
+background_mode = 2
+sky = SubResource("Sky_sde0x")
+tonemap_mode = 2
+glow_enabled = true
 
 [node name="Neptune" type="Node3D"]
 
@@ -27,3 +40,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 3.0
 
 [node name="Label3D" type="Label3D" parent="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o462q")

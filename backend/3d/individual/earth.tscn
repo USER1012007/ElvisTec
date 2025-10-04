@@ -1,13 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://nqpexnxs2ljm"]
+[gd_scene load_steps=9 format=3 uid="uid://nqpexnxs2ljm"]
 
+[ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_gxwco"]
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_gxwco"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_jrhui"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jrhui"]
+panorama = ExtResource("1_gxwco")
+
+[sub_resource type="Sky" id="Sky_sunyn"]
+sky_material = SubResource("PanoramaSkyMaterial_jrhui")
+
+[sub_resource type="Environment" id="Environment_7fnv2"]
+background_mode = 2
+sky = SubResource("Sky_sunyn")
+tonemap_mode = 2
+glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxwco"]
 albedo_texture = ExtResource("1_oy8y3")
 
 [node name="earth" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7fnv2")
 
 [node name="Node3D" type="Node3D" parent="."]
 

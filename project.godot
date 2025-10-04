@@ -11,14 +11,8 @@ config_version=5
 [application]
 
 config/name="ElvisTec"
-run/main_scene="uid://cepxcm7ebet73"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
-
-[autoload]
-
-state_manager="*res://backend/state_manager.gd"
-tile_manager="*res://backend/tile_manager.gd"
 
 [input]
 

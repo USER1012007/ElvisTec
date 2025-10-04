@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://cf0rdjro200ee"]
+
+[ext_resource type="Texture2D" uid="uid://cb02sbnj0gpuf" path="res://assets/mercury.jpg" id="1_us28u"]
+[ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_qfnbq"]
+[ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_hlpla"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jv4l5"]
+albedo_texture = ExtResource("1_us28u")
+
+[node name="Mercury" type="Node3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="mercury" type="CSGSphere3D" parent="Node3D"]
+radius = 100.0
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_jv4l5")
+script = ExtResource("2_qfnbq")
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+transform = Transform3D(0.71325046, -0.048892956, 0.6992019, 0, 0.9975641, 0.06975647, -0.70090926, -0.049753834, 0.71151304, 183.33719, 11.671371, 195.6052)
+script = ExtResource("3_hlpla")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
+light_energy = 3.0
+
+[node name="Label3D" type="Label3D" parent="Node3D"]

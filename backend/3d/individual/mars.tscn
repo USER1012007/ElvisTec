@@ -25,3 +25,5 @@ script = ExtResource("3_v1rdc")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 3.0
+
+[node name="Label3D" type="Label3D" parent="Node3D"]

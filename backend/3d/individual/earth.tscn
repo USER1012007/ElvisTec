@@ -1,16 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://nqpexnxs2ljm"]
+[gd_scene load_steps=5 format=3 uid="uid://nqpexnxs2ljm"]
 
+[ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_gxwco"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_jrhui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gxwco"]
+albedo_texture = ExtResource("1_oy8y3")
 
 [node name="earth" type="Node3D"]
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="earth_9_ktx" type="CSGSphere3D" parent="Node3D"]
+[node name="earth" type="CSGSphere3D" parent="Node3D"]
 radius = 100.0
 radial_segments = 44
 rings = 22
+material = SubResource("StandardMaterial3D_gxwco")
 script = ExtResource("2_gxwco")
 
 [node name="Camera3D" type="Camera3D" parent="Node3D"]

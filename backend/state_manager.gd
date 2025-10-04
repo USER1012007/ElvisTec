@@ -2,7 +2,7 @@ extends Node
 
 signal zoom_changed(new_zoom: int)
 
-var zoom_level: int = 0 
+var zoom_level: int = 1
 var tile_manager: Node = null
 
 func _ready():

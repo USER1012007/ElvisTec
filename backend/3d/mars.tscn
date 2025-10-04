@@ -1,5 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=25 format=3 uid="uid://ccqhnkceafusp"]
 
+[ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_ljt7k"]
 [ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_xn7oe"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_ksmih"]
 [ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="3_3qj6t"]
@@ -10,6 +11,16 @@
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="4_ng42j"]
 [ext_resource type="Texture2D" uid="uid://bie7erlqf4ofx" path="res://assets/venus.jpg" id="5_6g1ce"]
 [ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="7_0f8mn"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hsrjj"]
+panorama = ExtResource("1_ljt7k")
+
+[sub_resource type="Sky" id="Sky_kiuo5"]
+sky_material = SubResource("PanoramaSkyMaterial_hsrjj")
+
+[sub_resource type="Environment" id="Environment_jgu04"]
+background_mode = 2
+sky = SubResource("Sky_kiuo5")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d68ol"]
 load_path = "res://.godot/imported/8k_sun.jpg-a734ab3b5c53270c580529b2a0ceb734.s3tc.ctex"
@@ -49,6 +60,9 @@ albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
 albedo_texture = ExtResource("4_ng42j")
 
 [node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jgu04")
 
 [node name="sun" type="CSGSphere3D" parent="."]
 radius = 69.63
@@ -90,7 +104,7 @@ material = SubResource("StandardMaterial3D_m4xq6")
 script = ExtResource("2_ksmih")
 
 [node name="jupiter" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 95.52374, 7.6293945e-06, 69.70883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5063.4785, 7.6293945e-06, 69.70883)
 radius = 7.149
 radial_segments = 44
 rings = 22

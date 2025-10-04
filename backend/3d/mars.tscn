@@ -1,11 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=21 format=3 uid="uid://ccqhnkceafusp"]
 
 [ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_xn7oe"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_ksmih"]
+[ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="3_3qj6t"]
+[ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="3_d68ol"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_jwv7x"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4xq6"]
-albedo_texture = ExtResource("1_xn7oe")
+[ext_resource type="Texture2D" uid="uid://da0r2twyp5chs" path="res://assets/8k_jupiter.jpg" id="3_q66ve"]
+[ext_resource type="Texture2D" uid="uid://cb02sbnj0gpuf" path="res://assets/mercury.jpg" id="4_f3r57"]
+[ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="4_ng42j"]
+[ext_resource type="Texture2D" uid="uid://bie7erlqf4ofx" path="res://assets/venus.jpg" id="5_6g1ce"]
+[ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="7_0f8mn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d68ol"]
 load_path = "res://.godot/imported/8k_sun.jpg-a734ab3b5c53270c580529b2a0ceb734.s3tc.ctex"
@@ -13,7 +17,66 @@ load_path = "res://.godot/imported/8k_sun.jpg-a734ab3b5c53270c580529b2a0ceb734.s
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xn7oe"]
 albedo_texture = SubResource("CompressedTexture2D_d68ol")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6g1ce"]
+albedo_texture = ExtResource("4_f3r57")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q66ve"]
+albedo_texture = ExtResource("5_6g1ce")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3r57"]
+albedo_texture = ExtResource("3_d68ol")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4xq6"]
+albedo_texture = ExtResource("1_xn7oe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3qj6t"]
+albedo_color = Color(0.583441, 0.5621857, 0.5141133, 1)
+albedo_texture = ExtResource("3_q66ve")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ljt7k"]
+albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
+albedo_texture = ExtResource("7_0f8mn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ng42j"]
+albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
+albedo_texture = ExtResource("3_3qj6t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0f8mn"]
+albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
+albedo_texture = ExtResource("4_ng42j")
+
 [node name="Node3D" type="Node3D"]
+
+[node name="sun" type="CSGSphere3D" parent="."]
+radius = 69.63
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_xn7oe")
+script = ExtResource("2_ksmih")
+
+[node name="mercury" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.64642, 7.748604e-06, 76.973114)
+radius = 0.244
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_6g1ce")
+script = ExtResource("2_ksmih")
+
+[node name="venus" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 69.64642, -0.9372128, 77.50217)
+radius = 0.605
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_q66ve")
+script = ExtResource("2_ksmih")
+
+[node name="earth" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 68.19624, 7.748604e-06, 76.363884)
+radius = 0.638
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_f3r57")
+script = ExtResource("2_ksmih")
 
 [node name="mars_9_ktx" type="CSGSphere3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.93848, 7.6293945e-06, 76.1609)
@@ -23,11 +86,36 @@ rings = 22
 material = SubResource("StandardMaterial3D_m4xq6")
 script = ExtResource("2_ksmih")
 
-[node name="sun" type="CSGSphere3D" parent="."]
-radius = 69.63
+[node name="jupiter" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 73.17371, 7.6293945e-06, 69.70883)
+radius = 7.149
 radial_segments = 44
 rings = 22
-material = SubResource("StandardMaterial3D_xn7oe")
+material = SubResource("StandardMaterial3D_3qj6t")
+script = ExtResource("2_ksmih")
+
+[node name="saturn" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.79312, 6.67572e-06, 79.79328)
+radius = 2.476
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_ljt7k")
+script = ExtResource("2_ksmih")
+
+[node name="uranus" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 64.81093, 7.6293945e-06, 78.88127)
+radius = 2.556
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_ng42j")
+script = ExtResource("2_ksmih")
+
+[node name="neptuno" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.553246, 7.6293945e-06, 82.715645)
+radius = 2.476
+radial_segments = 44
+rings = 22
+material = SubResource("StandardMaterial3D_0f8mn")
 script = ExtResource("2_ksmih")
 
 [node name="Camera3D" type="Camera3D" parent="."]

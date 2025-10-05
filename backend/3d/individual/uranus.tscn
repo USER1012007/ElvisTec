@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://ylojtbektpip"]
+[gd_scene load_steps=8 format=3 uid="uid://ylojtbektpip"]
 
 [ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="1_ech4r"]
-[ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="2_akbvx"]
-[ext_resource type="Script" path="res://backend/3d/sun.gd" id="2_c14cy"]
+[ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_c14cy"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_akbvx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_algqn"]
@@ -30,10 +29,6 @@ radial_segments = 45
 rings = 22
 material = SubResource("StandardMaterial3D_algqn")
 script = ExtResource("2_c14cy")
-
-[node name="Camera3D" type="Camera3D" parent="Node3D"]
-transform = Transform3D(0.71325046, -0.048892956, 0.6992019, 0, 0.9975641, 0.06975647, -0.70090926, -0.049753834, 0.71151304, 183.33719, 11.671371, 195.6052)
-script = ExtResource("2_akbvx")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)

@@ -46,5 +46,8 @@ func _physics_process(_delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-
+	if Input.is_action_pressed("go_up"):
+		position.y -= 1
+	if Input.is_action_pressed("go_down"):
+		position.y += 1
 	move_and_slide()

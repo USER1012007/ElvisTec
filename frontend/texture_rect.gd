@@ -64,3 +64,13 @@ func _check_and_bounce():
 		elif bg.position.y > max_y:
 			bg.position.y = max_y
 			dir.y = -dir.y
+
+
+func _on_close_app_pressed() -> void:
+	get_tree().quit()
+	pass # Replace with function body.
+
+
+func _on_start_pressed() -> void:
+	get_tree().change_scene_to_file("res://frontend/main_scene.tscn")
+	pass # Replace with function body.

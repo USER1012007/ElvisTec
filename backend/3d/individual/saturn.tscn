@@ -1,12 +1,18 @@
-[gd_scene load_steps=9 format=3 uid="uid://bek1xhvu5vgyx"]
+[gd_scene load_steps=12 format=3 uid="uid://bek1xhvu5vgyx"]
 
 [ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="1_x1yfm"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_b4khw"]
+[ext_resource type="Texture2D" uid="uid://b16y0iutjloej" path="res://assets/saturn_rings.png" id="3_0sf2h"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_dnlbt"]
-[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_b4khw"]
+[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_b4khw"]
+[ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="5_utexb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4khw"]
 albedo_texture = ExtResource("1_x1yfm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_utexb"]
+transparency = 1
+albedo_texture = ExtResource("3_0sf2h")
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_b4khw"]
 panorama = ExtResource("3_dnlbt")
@@ -32,12 +38,21 @@ rings = 22
 material = SubResource("StandardMaterial3D_b4khw")
 script = ExtResource("2_b4khw")
 
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Node3D/saturn"]
+transform = Transform3D(0.99623716, -0.0866689, 0, 0.0866689, 0.99623716, 0, 0, 0, 1, -0.060531616, 0, 0)
+polygon = PackedVector2Array(168.9, 0, 168, 0, 250, 0.01, 250, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 32
+material = SubResource("StandardMaterial3D_utexb")
+
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 0.428
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_utexb")
+script = ExtResource("5_utexb")
 metadata/name = "saturn"
 
 [node name="Camera3D" type="Camera3D" parent="."]

@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="8_lb067"]
 [ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="9_bqcch"]
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="10_hmnf6"]
-[ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="11_5pwie"]
+[ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="12_w2d3l"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hsrjj"]
 panorama = ExtResource("1_b5cax")
@@ -144,12 +144,16 @@ material = SubResource("StandardMaterial3D_0f8mn")
 script = ExtResource("2_w2d3l")
 metadata/orbit_speed = 5.4
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.71325046, -0.048892956, 0.6992019, 0, 0.9975641, 0.06975647, -0.70090926, -0.049753834, 0.71151304, 210.05159, 11.671371, 118.94896)
-fov = 37.2
-script = ExtResource("11_5pwie")
-
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 light_energy = 4.0
 omni_range = 4096.0
 omni_attenuation = 0.0
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 171.8097, 0, 0)
+script = ExtResource("12_w2d3l")
+
+[node name="Node3D" type="Node3D" parent="CharacterBody3D"]
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)

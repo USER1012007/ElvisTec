@@ -11,9 +11,18 @@ config_version=5
 [application]
 
 config/name="ElvisTec"
+<<<<<<< HEAD
 run/main_scene="uid://dpl2gjxmg7g4t"
+=======
+run/main_scene="uid://cepxcm7ebet73"
+>>>>>>> b8ba73a (camera_3d.gd: initial implementation for mouse camera)
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+state_manager="*res://backend/state_manager.gd"
+tile_manager="*res://backend/tile_manager.gd"
 
 [input]
 

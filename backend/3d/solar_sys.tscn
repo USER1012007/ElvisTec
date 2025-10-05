@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://ccqhnkceafusp"]
 
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
-[ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_qkbaj"]
+[ext_resource type="Script" uid="uid://cotd4n7vyboj5" path="res://backend/3d/sun_real.gd" id="2_qkbaj"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_w2d3l"]
 [ext_resource type="Texture2D" uid="uid://cb02sbnj0gpuf" path="res://assets/mercury.jpg" id="3_qkbaj"]
 [ext_resource type="Texture2D" uid="uid://bie7erlqf4ofx" path="res://assets/venus.jpg" id="4_4xd3j"]

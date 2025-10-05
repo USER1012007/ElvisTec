@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://b55cg32scrk5b"]
 
 [ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_3co4n"]
-[ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_vnqrh"]
+[ext_resource type="Script" path="res://backend/3d/sun.gd" id="2_vnqrh"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_v1rdc"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_vnqrh"]
 
@@ -43,3 +43,4 @@ light_energy = 3.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_nuxp6")
+metadata/name = "mars"

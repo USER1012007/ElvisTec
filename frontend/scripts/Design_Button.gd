@@ -17,3 +17,9 @@ func on_sun_pressed() -> void:
 	print(self.get_meta("scene"))
 	var scene_path = "res://backend/3d/individual/" + self.get_meta("scene")
 	get_tree().change_scene_to_file(scene_path)
+
+
+func _on_pressed() -> void:
+	print(self.get_meta("scene"))
+	var scene_path = "res://backend/3d/" + self.get_meta("scene")
+	get_tree().change_scene_to_file(scene_path)

@@ -81,6 +81,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
 visible = false
 layout_mode = 2
+text = "Mostrar informacion"
 vertical_alignment = 2
 
 [connection signal="pressed" from="Control/VBoxContainer/CheckButton" to="Control/VBoxContainer" method="_on_button_pressed"]

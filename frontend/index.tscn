@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpl2gjxmg7g4t"]
 
-[ext_resource type="Texture2D" uid="uid://egw8bck5rpby" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
+[ext_resource type="Texture2D" uid="uid://cqalj4kmxmh5n" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
 [ext_resource type="Script" uid="uid://dmg8sg8rgvpap" path="res://frontend/texture_rect.gd" id="2_f22ye"]
 [ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/scripts/Design_Button.gd" id="2_xwb8m"]
 [ext_resource type="Script" uid="uid://kfllmvbfceh" path="res://frontend/Desing_Button_index.gd" id="3_i1ms3"]
@@ -168,7 +168,7 @@ theme_override_font_sizes/font_size = 26
 text = "Urano
 "
 script = ExtResource("2_xwb8m")
-metadata/scene = "neptune.tscn"
+metadata/scene = "uranus.tscn"
 
 [node name="Neptune" type="Button" parent="VBoxContainer3"]
 layout_mode = 2

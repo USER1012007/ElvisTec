@@ -6,12 +6,13 @@ const SPEED: int = 50
 @onready var cam_pivot: Node3D = $Node3D
 
 var pitch: float = 0.0
+var pause: bool = false
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not pause:
 		rotate_y(deg_to_rad(event.relative.x * mouse_sensitivity))
 
 		pitch += event.relative.y * mouse_sensitivity
@@ -32,6 +33,14 @@ func _input(event):
 
 	if Input.is_action_just_pressed("atajo_descripcion"):
 		mostrar_descripcion_planeta()
+		
+	if Input.is_action_just_pressed("pause"):
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CONFINED)
+			pause = true
+		else:
+			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+			pause = false
 
 func mostrar_descripcion_planeta():
 	print("Mostrando descripción del planeta...")

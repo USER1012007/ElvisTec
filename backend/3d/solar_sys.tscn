@@ -1,6 +1,5 @@
-[gd_scene load_steps=31 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=30 format=3 uid="uid://ccqhnkceafusp"]
 
-[ext_resource type="Script" path="res://backend/3d/node3d.gd" id="1_4xd3j"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
 [ext_resource type="Script" uid="uid://cotd4n7vyboj5" path="res://backend/3d/sun_real.gd" id="2_qkbaj"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_w2d3l"]
@@ -73,13 +72,13 @@ albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
 albedo_texture = ExtResource("10_hmnf6")
 
 [node name="Node3D" type="Node3D"]
-script = ExtResource("1_4xd3j")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jgu04")
 
 [node name="orbit_jupiter" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
 polygon = PackedVector2Array(117, 2, 117, 0, 119, 0.01, 119, 2)
 mode = 1
 spin_degrees = 360.0

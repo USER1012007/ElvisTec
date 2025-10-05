@@ -63,7 +63,6 @@ offset_left = 928.0
 offset_top = 390.0
 offset_right = 1028.0
 offset_bottom = 413.0
-text = "testo prueba"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 262.1171)

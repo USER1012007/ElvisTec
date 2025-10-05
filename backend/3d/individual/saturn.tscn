@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b16y0iutjloej" path="res://assets/saturn_rings.png" id="3_0sf2h"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_dnlbt"]
 [ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_b4khw"]
-[ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="5_utexb"]
+[ext_resource type="Script" uid="uid://nwvtecqk0dv6" path="res://backend/3d/individual/control.gd" id="7_fjiq0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b4khw"]
 albedo_texture = ExtResource("1_x1yfm")
@@ -52,7 +52,6 @@ light_energy = 0.428
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_utexb")
-script = ExtResource("5_utexb")
 metadata/name = "saturn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -73,3 +72,27 @@ offset_bottom = 8.0
 theme_override_font_sizes/font_size = 26
 text = "Volver"
 script = ExtResource("4_b4khw")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 456.0
+offset_right = 290.0
+offset_bottom = 643.0
+script = ExtResource("7_fjiq0")
+
+[node name="CheckButton" type="CheckButton" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+vertical_alignment = 2
+
+[connection signal="pressed" from="Control/VBoxContainer/CheckButton" to="Control/VBoxContainer" method="_on_button_pressed"]

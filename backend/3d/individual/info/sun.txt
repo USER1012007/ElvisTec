@@ -1,5 +1,5 @@
-* Tipo: El Sol es una estrella de secuencia principal de tipo G o "enana amarilla".
-* Edad y ciclo de vida: Tiene aproximadamente entre 4.500 y 4.600 millones de años y se considera de mediana edad, con varios miles de millones de años restantes en su fase actual.
+* El Sol es una estrella de secuencia principal de tipo G o "enana amarilla".
+* Edad y ciclo de vida: Tiene aproximadamente 4.550 millones de años y se considera de mediana edad.
 * Composición: Está compuesto principalmente de hidrógeno y helio.
-* Estructura: El Sol tiene capas diferenciadas: un núcleo donde se produce la fusión, una zona radiativa, una zona convectiva y una atmósfera con la fotosfera (superficie visible), la cromosfera y la corona (atmósfera más externa).
-* Masa y tamaño: Contiene el 99,86 % de la masa total del sistema solar y es aproximadamente 100 veces más ancho que la Tierra.
+* Estructura: El Sol tiene capas: un núcleo donde se produce la fusión, una zona radiativa, una zona convectiva y una atmósfera con la fotosfera, la cromosfera y la corona.
+* Masa y tamaño: Contiene el 99,86 % de la masa total del sistema solar.

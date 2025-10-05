@@ -19,6 +19,8 @@ func _ready() -> void:
 
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	label.text = file.get_as_text()
+	label.add_theme_font_size_override("font_size", 26)
+	label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	file.close()
 	
 func _on_button_pressed() -> void:

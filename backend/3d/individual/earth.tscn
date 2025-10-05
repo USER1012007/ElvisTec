@@ -77,11 +77,13 @@ script = ExtResource("5_jrhui")
 
 [node name="CheckButton" type="CheckButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 26
 text = "Mostrar informacion"
 
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
 visible = false
 layout_mode = 2
 vertical_alignment = 2
+autowrap_mode = 3
 
 [connection signal="pressed" from="Control/VBoxContainer/CheckButton" to="Control/VBoxContainer" method="_on_button_pressed"]

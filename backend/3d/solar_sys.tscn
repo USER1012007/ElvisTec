@@ -68,7 +68,7 @@ environment = SubResource("Environment_jgu04")
 [node name="sun" type="CSGSphere3D" parent="."]
 radius = 69.63
 radial_segments = 44
-rings = 22
+rings = 48
 material = SubResource("StandardMaterial3D_xn7oe")
 script = ExtResource("2_qkbaj")
 

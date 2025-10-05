@@ -8,8 +8,11 @@ extends Control
 @onready var bg: TextureRect = $TextureRect
 
 var dir := Vector2.ZERO
-
+@onready var box_container2=$VBoxContainer2
+@onready var box_container3=$VBoxContainer3
 func _ready():
+	box_container2.visible=false
+	box_container3.visible=false
 	if bg.texture:
 		bg.size = bg.texture.get_size()   
 
@@ -72,5 +75,7 @@ func _on_close_app_pressed() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://frontend/main_scene.tscn")
+	$VBoxContainer.visible = false
+	$VBoxContainer2.visible=true
+
 	pass 

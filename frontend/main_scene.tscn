@@ -104,7 +104,7 @@ script = ExtResource("4_3v8fw")
 
 [node name="Popup2" type="Popup" parent="."]
 oversampling_override = 1.0
-size = Vector2i(212, 429)
+size = Vector2i(212, 468)
 visible = true
 script = ExtResource("4_jheov")
 
@@ -137,6 +137,7 @@ metadata/scene = "mercury.tscn"
 [node name="Venus" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_font_sizes/font_size = 26
 text = "Venus"
 script = ExtResource("4_3v8fw")
 metadata/scene = "venus.tscn"
@@ -144,6 +145,7 @@ metadata/scene = "venus.tscn"
 [node name="Earth" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_font_sizes/font_size = 26
 text = "Tierra"
 script = ExtResource("4_3v8fw")
 metadata/scene = "earth.tscn"
@@ -151,6 +153,7 @@ metadata/scene = "earth.tscn"
 [node name="Mars" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_font_sizes/font_size = 26
 text = "Marte"
 script = ExtResource("4_3v8fw")
 metadata/scene = "mars.tscn"

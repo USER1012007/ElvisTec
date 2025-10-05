@@ -1,47 +1,12 @@
-extends CharacterBody3D
+extends Node3D
 
-const SPEED: int = 50
-@export var mouse_sensitivity: float = 0.2
-@onready var cam: Camera3D = $Node3D/Camera3D
-
+@onready var sun_ktx: CSGSphere3D = get_node(get_meta("planet"))
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	# Example: store the name of the node in metadata
+	set_meta("planet", "sun_ktx")
 
-func _input(event):
-	# Movimiento de cámara con el mouse
-	if event is InputEventMouseMotion:
-		rotate_y(deg_to_rad(event.relative.x * mouse_sensitivity))
-	
-	# Zoom con acciones
-	if Input.is_action_just_released("planetas_acercar_zoom"):
-		if cam.fov > 10:
-			cam.fov -= 1
-		else:
-			cam.fov -= 0.5
+	# Now you can access it dynamically:
+	sun_ktx = get_node(get_meta("planet"))
 
-	if Input.is_action_just_released("planetas_alejar_zoom"):
-		if cam.fov < 90:
-			cam.fov += 1
-		else:
-			cam.fov += 0.5
-
-	# Atajo con la tecla E para mostrar descripción del planeta
-	if Input.is_action_just_pressed("atajo_descripcion"):
-		mostrar_descripcion_planeta()
-
-func mostrar_descripcion_planeta():
-	# Aquí defines lo que sucede al presionar E
-	print("Mostrando descripción del planeta...")  # Puedes reemplazarlo con tu HUD o animación
-
-func _physics_process(_delta: float) -> void:
-	var input_dir: Vector2 = Input.get_vector("camera_up", "camera_down", "camera_right", "camera_left")
-	var direction: Vector3 = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-		velocity.z = move_toward(velocity.z, 0, SPEED)
-
-	move_and_slide()
+	sun_ktx.material_override = StandardMaterial3D.new()
+	sun_ktx.material_override.albedo_color = Color(1, 1, 0)

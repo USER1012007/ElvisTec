@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=39 format=3 uid="uid://ccqhnkceafusp"]
 
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
 [ext_resource type="Script" uid="uid://cotd4n7vyboj5" path="res://backend/3d/sun_real.gd" id="2_qkbaj"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="12_w2d3l"]
 [ext_resource type="Script" path="res://backend/3d/return_index.gd" id="13_qkbaj"]
 [ext_resource type="Script" uid="uid://clsab8rplvroo" path="res://backend/3d/orbitas_toggle.gd" id="15_qqvct"]
+[ext_resource type="Script" uid="uid://bahabp5jytgwi" path="res://backend/3d/animation_toggle.gd" id="16_l3t50"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hsrjj"]
 panorama = ExtResource("1_b5cax")
@@ -316,5 +317,13 @@ script = ExtResource("13_qkbaj")
 layout_mode = 2
 focus_mode = 0
 theme_override_font_sizes/font_size = 26
-text = "Orbitas"
+text = "Órbitas"
 script = ExtResource("15_qqvct")
+
+[node name="CheckButton2" type="CheckButton" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+button_pressed = true
+text = "Animación"
+script = ExtResource("16_l3t50")

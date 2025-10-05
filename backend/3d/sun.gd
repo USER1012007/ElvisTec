@@ -22,5 +22,5 @@ func _input(event):
 
 	elif event is InputEventMouseMotion and rotating:
 		var delta = event.relative
-		rotation.y -= deg_to_rad(delta.x * 0.5)
-		rotation.x -= deg_to_rad(delta.y * 0.5)
+		rotation.y += deg_to_rad(delta.x * 0.5)
+		rotation.x += deg_to_rad(delta.y * 0.5)

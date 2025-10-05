@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpl2gjxmg7g4t"]
 
-[ext_resource type="Texture2D" uid="uid://cqalj4kmxmh5n" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
+[ext_resource type="Texture2D" uid="uid://cvlcfxowmfuq7" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
 [ext_resource type="Script" uid="uid://dmg8sg8rgvpap" path="res://frontend/texture_rect.gd" id="2_f22ye"]
 [ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/scripts/Design_Button.gd" id="2_xwb8m"]
 [ext_resource type="Script" uid="uid://kfllmvbfceh" path="res://frontend/Desing_Button_index.gd" id="3_i1ms3"]
@@ -208,6 +208,7 @@ script = ExtResource("3_i1ms3")
 [connection signal="pressed" from="VBoxContainer2/Planets" to="." method="_on_planets_pressed"]
 [connection signal="pressed" from="VBoxContainer2/sys_Solar" to="VBoxContainer2/sys_Solar" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Sun" to="." method="_on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Sun" to="VBoxContainer3/Sun" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Mercury" to="VBoxContainer3/Mercury" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Venus" to="VBoxContainer3/Venus" method="on_sun_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://5i16ushsqe5v"]
+[gd_scene load_steps=5 format=3 uid="uid://5i16ushsqe5v"]
 
 [ext_resource type="Script" uid="uid://bubt43gelp8kk" path="res://frontend/scripts/main_scene.gd" id="1_6hmje"]
 [ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/scripts/Design_Button.gd" id="4_3v8fw"]
@@ -26,27 +26,6 @@ func _on_button_pressed():
 "
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivsrt"]
-
-[sub_resource type="GDScript" id="GDScript_ivsrt"]
-script/source = "extends Popup
-
-func _on_volver_pressed() -> void:
-	hide()
-	pass # Replace with function body.
-
-
-func _on_planetas_pressed() -> void:
-	hide()
-	pass # Replace with function body.
-"
-
-[sub_resource type="GDScript" id="GDScript_rleuo"]
-script/source = "extends Popup
-
-func _on_volver_2_pressed() -> void:
-	hide()
-	pass 
-"
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -192,22 +171,9 @@ theme_override_font_sizes/font_size = 26
 text = "Volver"
 script = ExtResource("4_3v8fw")
 
-[node name="Popup" type="Popup" parent="."]
-oversampling_override = 1.0
-size = Vector2i(317, 316)
-script = SubResource("GDScript_ivsrt")
-
-[node name="Popup2" type="Popup" parent="."]
-oversampling_override = 1.0
-size = Vector2i(212, 468)
-visible = true
-script = SubResource("GDScript_rleuo")
-
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Planets" to="." method="_on_planetas_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Planets" to="Popup" method="_on_planetas_pressed"]
 [connection signal="pressed" from="VBoxContainer2/sys_Solar" to="VBoxContainer2/sys_Solar" method="_on_pressed"]
-[connection signal="pressed" from="VBoxContainer2/Return" to="Popup" method="_on_volver_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Sun" to="VBoxContainer3/Sun" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Mercury" to="VBoxContainer3/Mercury" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Venus" to="VBoxContainer3/Venus" method="on_sun_pressed"]
@@ -217,4 +183,3 @@ script = SubResource("GDScript_rleuo")
 [connection signal="pressed" from="VBoxContainer3/Saturn" to="VBoxContainer3/Saturn" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Neptune" to="VBoxContainer3/Neptune" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Return2" to="." method="_on_volver_2_pressed"]
-[connection signal="pressed" from="VBoxContainer3/Return2" to="Popup2" method="_on_volver_2_pressed"]

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://dg42yyedwrxxp"]
+[gd_scene load_steps=9 format=3 uid="uid://dg42yyedwrxxp"]
 
 [ext_resource type="Texture2D" uid="uid://c81jrdsuehcxw" path="res://assets/8k_sun.jpg" id="1_usyuv"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_25jue"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_am44p"]
+[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_25jue"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am44p"]
 albedo_texture = ExtResource("1_usyuv")
@@ -40,3 +41,19 @@ metadata/name = "sun"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 262.1171)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 26
+text = "Volver"
+script = ExtResource("4_25jue")

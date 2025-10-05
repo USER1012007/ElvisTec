@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://nqpexnxs2ljm"]
+[gd_scene load_steps=10 format=3 uid="uid://nqpexnxs2ljm"]
 
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_gxwco"]
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="3_gxwco"]
 [ext_resource type="Script" uid="uid://nwvtecqk0dv6" path="res://backend/3d/individual/control.gd" id="5_jrhui"]
+[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="5_sunyn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jrhui"]
 panorama = ExtResource("1_gxwco")
@@ -65,5 +66,21 @@ text = "testo prueba"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 262.1171)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 26
+text = "Volver"
+script = ExtResource("5_sunyn")
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

@@ -1,17 +1,19 @@
-[gd_scene load_steps=26 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=28 format=3 uid="uid://ccqhnkceafusp"]
 
+[ext_resource type="Script" uid="uid://cax7ubokd06cx" path="res://backend/3d/node3d.gd" id="1_4xd3j"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
 [ext_resource type="Script" uid="uid://cotd4n7vyboj5" path="res://backend/3d/sun_real.gd" id="2_qkbaj"]
 [ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_w2d3l"]
 [ext_resource type="Texture2D" uid="uid://cb02sbnj0gpuf" path="res://assets/mercury.jpg" id="3_qkbaj"]
 [ext_resource type="Texture2D" uid="uid://bie7erlqf4ofx" path="res://assets/venus.jpg" id="4_4xd3j"]
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="5_qqvct"]
-[ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="6_l3t50"]
+[ext_resource type="Texture2D" path="res://assets/mars_9.ktx" id="6_l3t50"]
 [ext_resource type="Texture2D" uid="uid://da0r2twyp5chs" path="res://assets/8k_jupiter.jpg" id="7_usd4t"]
 [ext_resource type="Texture2D" uid="uid://mnxmwglcln67" path="res://assets/saturn.jpg" id="8_lb067"]
 [ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="9_bqcch"]
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="10_hmnf6"]
 [ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="12_w2d3l"]
+[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="13_qkbaj"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hsrjj"]
 panorama = ExtResource("1_b5cax")
@@ -61,6 +63,7 @@ albedo_color = Color(0.5278208, 0.5278208, 0.52782077, 1)
 albedo_texture = ExtResource("10_hmnf6")
 
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_4xd3j")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jgu04")
@@ -157,3 +160,20 @@ script = ExtResource("12_w2d3l")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Node3D"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_font_sizes/font_size = 26
+text = "Volver
+"
+script = ExtResource("13_qkbaj")

@@ -62,10 +62,19 @@ script = ExtResource("2_xwb8m")
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
-text = "Sistema a escala
+text = "Sistema Solar
 "
 script = ExtResource("2_xwb8m")
 metadata/scene = "solar_sys.tscn"
+
+[node name="sys_Solar_escala2" type="Button" parent="VBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
+theme_override_font_sizes/font_size = 36
+text = "Sistema a escala
+"
+script = ExtResource("2_xwb8m")
+metadata/scene = "solar_sys_escala.tscn"
 
 [node name="Return" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
@@ -218,6 +227,7 @@ script = ExtResource("3_i1ms3")
 
 [connection signal="pressed" from="VBoxContainer2/Planets" to="." method="_on_planets_pressed"]
 [connection signal="pressed" from="VBoxContainer2/sys_Solar" to="VBoxContainer2/sys_Solar" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer2/sys_Solar_escala2" to="VBoxContainer2/sys_Solar_escala2" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer2/Return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Sun" to="." method="_on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Sun" to="VBoxContainer3/Sun" method="on_sun_pressed"]

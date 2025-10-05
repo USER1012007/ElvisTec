@@ -10,7 +10,7 @@ func _ready() -> void:
 	add_theme_stylebox_override("normal", normal)
 
 	var hover = normal.duplicate()
-	hover.bg_color = Color("#390879")  
+	hover.bg_color = Color("#EAE0C8CC")  
 	add_theme_stylebox_override("hover", hover)
 
 func on_sun_pressed() -> void:

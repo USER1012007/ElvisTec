@@ -52,40 +52,41 @@ theme_override_constants/margin_top = 10
 
 [node name="Planets" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
 text = "Planetas"
 script = ExtResource("2_xwb8m")
 
 [node name="sys_Solar" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
 text = "Sistema a escala
 "
 script = ExtResource("2_xwb8m")
 metadata/scene = "solar_sys.tscn"
 
-[node name="Exit" type="Button" parent="VBoxContainer2"]
-layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
-theme_override_font_sizes/font_size = 36
-text = "Salir de la app"
-script = ExtResource("2_xwb8m")
-
 [node name="Return" type="Button" parent="VBoxContainer2"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_hk5i8")
 text = "Volver"
 script = ExtResource("2_xwb8m")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
-visible = false
-layout_mode = 0
-offset_right = 212.0
-offset_bottom = 468.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -234.0
+offset_right = 106.0
+offset_bottom = 234.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Label" type="Label" parent="VBoxContainer3"]
 layout_mode = 2
@@ -95,7 +96,7 @@ horizontal_alignment = 1
 
 [node name="Sun" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Sol"
 script = ExtResource("2_xwb8m")
@@ -103,7 +104,7 @@ metadata/scene = "sun.tscn"
 
 [node name="Mercury" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Mercurio"
 script = ExtResource("2_xwb8m")
@@ -111,7 +112,7 @@ metadata/scene = "mercury.tscn"
 
 [node name="Venus" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Venus"
 script = ExtResource("2_xwb8m")
@@ -119,7 +120,7 @@ metadata/scene = "venus.tscn"
 
 [node name="Earth" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Tierra"
 script = ExtResource("2_xwb8m")
@@ -127,7 +128,7 @@ metadata/scene = "earth.tscn"
 
 [node name="Mars" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Marte"
 script = ExtResource("2_xwb8m")
@@ -135,7 +136,7 @@ metadata/scene = "mars.tscn"
 
 [node name="Jupiter" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Jupiter"
 script = ExtResource("2_xwb8m")
@@ -143,7 +144,7 @@ metadata/scene = "jupiter.tscn"
 
 [node name="Saturn" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Saturno"
 script = ExtResource("2_xwb8m")
@@ -151,7 +152,7 @@ metadata/scene = "saturn.tscn"
 
 [node name="Neptune" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Neptuno"
 script = ExtResource("2_xwb8m")
@@ -159,7 +160,7 @@ metadata/scene = "neptune.tscn"
 
 [node name="Return2" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 26
 text = "Volver"
 script = ExtResource("2_xwb8m")
@@ -191,18 +192,22 @@ layout_mode = 2
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 50
 text = "Iniciar"
 script = ExtResource("3_i1ms3")
 
 [node name="Close_App" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 50
 text = "Cerrar aplicación
 "
 script = ExtResource("3_i1ms3")
 
+[connection signal="pressed" from="VBoxContainer2/Planets" to="." method="_on_planets_pressed"]
 [connection signal="pressed" from="VBoxContainer2/sys_Solar" to="VBoxContainer2/sys_Solar" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer2/Return" to="." method="_on_return_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Sun" to="VBoxContainer3/Sun" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Mercury" to="VBoxContainer3/Mercury" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Venus" to="VBoxContainer3/Venus" method="on_sun_pressed"]
@@ -211,5 +216,6 @@ script = ExtResource("3_i1ms3")
 [connection signal="pressed" from="VBoxContainer3/Jupiter" to="VBoxContainer3/Jupiter" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Saturn" to="VBoxContainer3/Saturn" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Neptune" to="VBoxContainer3/Neptune" method="on_sun_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Return2" to="." method="_on_return_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Close_App" to="." method="_on_close_app_pressed"]

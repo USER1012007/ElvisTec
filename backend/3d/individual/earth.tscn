@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="3_gxwco"]
 [ext_resource type="Script" uid="uid://nwvtecqk0dv6" path="res://backend/3d/individual/control.gd" id="5_jrhui"]
-[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="5_sunyn"]
+[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="5_sunyn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jrhui"]
 panorama = ExtResource("1_gxwco")
@@ -58,7 +58,6 @@ offset_bottom = 584.0
 text = "Mas Información"
 
 [node name="Label" type="Label" parent="Control"]
-visible = false
 layout_mode = 0
 offset_left = 928.0
 offset_top = 390.0

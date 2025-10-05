@@ -5,4 +5,4 @@ var angular_speed = PI
 
 func _process(delta):
 	if animation:
-		rotation.y += angular_speed * delta * 1/speed
+		rotation.y -= angular_speed * delta * 1/speed

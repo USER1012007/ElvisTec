@@ -3,16 +3,21 @@ extends CharacterBody3D
 const SPEED: int = 50
 @export var mouse_sensitivity: float = 0.2
 @onready var cam: Camera3D = $Node3D/Camera3D
+@onready var cam_pivot: Node3D = $Node3D
+
+var pitch: float = 0.0
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _input(event):
-	# Movimiento de cámara con el mouse
 	if event is InputEventMouseMotion:
 		rotate_y(deg_to_rad(event.relative.x * mouse_sensitivity))
-	
-	# Zoom con acciones
+
+		pitch += event.relative.y * mouse_sensitivity
+		pitch = clamp(pitch, -90, 90)
+		cam_pivot.rotation.z = deg_to_rad(pitch)
+
 	if Input.is_action_just_released("planetas_acercar_zoom"):
 		if cam.fov > 10:
 			cam.fov -= 1
@@ -25,13 +30,11 @@ func _input(event):
 		else:
 			cam.fov += 0.5
 
-	# Atajo con la tecla E para mostrar descripción del planeta
 	if Input.is_action_just_pressed("atajo_descripcion"):
 		mostrar_descripcion_planeta()
 
 func mostrar_descripcion_planeta():
-	# Aquí defines lo que sucede al presionar E
-	print("Mostrando descripción del planeta...")  # Puedes reemplazarlo con tu HUD o animación
+	print("Mostrando descripción del planeta...")
 
 func _physics_process(_delta: float) -> void:
 	var input_dir: Vector2 = Input.get_vector("camera_up", "camera_down", "camera_right", "camera_left")

@@ -27,6 +27,7 @@ grow_horizontal = 0
 texture = ExtResource("1_f22ye")
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,6 +76,7 @@ text = "Volver"
 script = ExtResource("2_xwb8m")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

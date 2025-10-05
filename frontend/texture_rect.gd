@@ -12,8 +12,8 @@ var dir := Vector2.ZERO
 @onready var box_container3=$VBoxContainer3
 @onready var box_container1 = $VBoxContainer
 func _ready():
-	box_container2.visible=false
-	box_container3.visible=false
+	#box_container2.visible=false
+	#box_container3.visible=false
 	if bg.texture:
 		bg.size = bg.texture.get_size()   
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://5i16ushsqe5v"]
+[gd_scene load_steps=7 format=3 uid="uid://5i16ushsqe5v"]
 
-[ext_resource type="Script" uid="uid://bubt43gelp8kk" path="res://frontend/main_scene.gd" id="1_6hmje"]
-[ext_resource type="Script" uid="uid://dqmlev43wydi" path="res://frontend/menu.gd" id="2_ivsrt"]
-[ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/Desing_Button.gd" id="2_rleuo"]
-[ext_resource type="Script" uid="uid://bvrsthe6mnias" path="res://frontend/popup_2.gd" id="4_jheov"]
+[ext_resource type="Script" uid="uid://bubt43gelp8kk" path="res://frontend/scripts/main_scene.gd" id="1_6hmje"]
+[ext_resource type="Script" uid="uid://dqmlev43wydi" path="res://frontend/scripts/menu.gd" id="2_ivsrt"]
+[ext_resource type="Script" uid="uid://dexlt8qih0t0m" path="res://frontend/diseño_button.gd" id="2_rleuo"]
+[ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/scripts/Design_Button.gd" id="4_3v8fw"]
+[ext_resource type="Script" uid="uid://bvrsthe6mnias" path="res://frontend/scripts/popup_2.gd" id="4_jheov"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivsrt"]
 
@@ -54,7 +55,7 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 36
 text = "Planetas"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
 
 [node name="sys_Solar" type="Button" parent="Popup/VBoxContainer"]
 layout_mode = 2
@@ -62,14 +63,14 @@ theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.0588235
 theme_override_font_sizes/font_size = 36
 text = "Sistema a escala
 "
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
 
 [node name="Exit" type="Button" parent="Popup/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 36
 text = "Salir de la app"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
 
 [node name="Return" type="Button" parent="Popup/VBoxContainer"]
 layout_mode = 2
@@ -77,11 +78,16 @@ theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.0588235
 theme_override_font_sizes/font_size = 36
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ivsrt")
 text = "Volver"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
 
 [node name="Popup2" type="Popup" parent="."]
 oversampling_override = 1.0
+<<<<<<< HEAD
 size = Vector2i(212, 324)
+=======
+size = Vector2i(212, 429)
+visible = true
+>>>>>>> 6d073379cb54ea6149f92fc48e5e4a418a6b55b0
 script = ExtResource("4_jheov")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Popup2"]
@@ -99,68 +105,81 @@ layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Sol"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "sun.tscn"
 
 [node name="Mercury" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Mercurio"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "mercury.tscn"
 
 [node name="Venus" type="Button" parent="Popup2/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 text = "Venus"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "venus.tscn"
 
-[node name="Eart" type="Button" parent="Popup2/VBoxContainer"]
-visible = false
+[node name="Earth" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 text = "Tierra"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "earth.tscn"
 
 [node name="Mars" type="Button" parent="Popup2/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 text = "Marte"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "mars.tscn"
 
 [node name="Jupiter" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Jupiter"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "jupiter.tscn"
 
 [node name="Saturn" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Saturno"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "saturn.tscn"
 
 [node name="Neptune" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Neptuno"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
+metadata/scene = "neptune.tscn"
 
 [node name="Return2" type="Button" parent="Popup2/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.73333335, 0.87058824, 0.05882353, 1)
 theme_override_font_sizes/font_size = 26
 text = "Volver"
-script = ExtResource("2_rleuo")
+script = ExtResource("4_3v8fw")
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer/Planets" to="." method="_on_planetas_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer/Planets" to="Popup" method="_on_planetas_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer/Exit" to="." method="_on_salir_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer/Return" to="Popup" method="_on_volver_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Sun" to="Popup2/VBoxContainer/Sun" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Mercury" to="Popup2/VBoxContainer/Mercury" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Venus" to="Popup2/VBoxContainer/Venus" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Earth" to="Popup2/VBoxContainer/Earth" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Mars" to="Popup2/VBoxContainer/Mars" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Jupiter" to="Popup2/VBoxContainer/Jupiter" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Saturn" to="Popup2/VBoxContainer/Saturn" method="on_sun_pressed"]
+[connection signal="pressed" from="Popup2/VBoxContainer/Neptune" to="Popup2/VBoxContainer/Neptune" method="on_sun_pressed"]
 [connection signal="pressed" from="Popup2/VBoxContainer/Return2" to="." method="_on_volver_2_pressed"]
 [connection signal="pressed" from="Popup2/VBoxContainer/Return2" to="Popup2" method="_on_volver_2_pressed"]

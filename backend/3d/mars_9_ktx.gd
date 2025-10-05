@@ -3,7 +3,7 @@ var speed = 4
 var angular_speed = 2
 var angle: float = 0.0
 var orbit_radius: float = position.x
-var orbit_speed: float = 0.0 
+var orbit_speed: float = 0.0
 
 func _ready():
 	orbit_speed = self.get_meta("orbit_speed")

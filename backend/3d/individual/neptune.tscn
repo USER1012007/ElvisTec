@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcpc5poh3pby5"]
 
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="1_gxxb6"]
-[ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_xg433"]
+[ext_resource type="Script" path="res://backend/3d/sun.gd" id="2_xg433"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_12fef"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_xg433"]
 
@@ -43,3 +43,4 @@ light_energy = 3.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_o462q")
+metadata/name = "neptune"

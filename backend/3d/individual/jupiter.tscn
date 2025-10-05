@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://jj68auqlgrqj"]
 
 [ext_resource type="Texture2D" uid="uid://da0r2twyp5chs" path="res://assets/8k_jupiter.jpg" id="1_x8gqh"]
-[ext_resource type="Script" uid="uid://ccwrff6h760yk" path="res://backend/3d/mars_9_ktx.gd" id="2_nxswx"]
+[ext_resource type="Script" path="res://backend/3d/sun.gd" id="2_nxswx"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_dj7x1"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_nxswx"]
 
@@ -44,3 +44,4 @@ light_energy = 3.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_7amxk")
+metadata/name = "jupiter"

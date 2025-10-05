@@ -218,7 +218,7 @@ script = ExtResource("2_w2d3l")
 metadata/orbit_speed = 35.0
 
 [node name="earth" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 97.611786, 0, 0)
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 97.611786, 0, 0)
 radius = 0.638
 radial_segments = 44
 rings = 22

@@ -37,7 +37,7 @@ script = ExtResource("3_gxwco")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
-light_energy = 3.0
+light_energy = 1.923
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -62,5 +62,8 @@ offset_top = 390.0
 offset_right = 1028.0
 offset_bottom = 413.0
 text = "testo prueba"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 262.1171)
 
 [connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

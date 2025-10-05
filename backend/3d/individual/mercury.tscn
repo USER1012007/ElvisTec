@@ -32,10 +32,13 @@ script = ExtResource("2_qfnbq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
-light_energy = 3.0
+light_energy = 1.009
 
 [node name="Label3D" type="Label3D" parent="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_dshor")
 metadata/name = "mercury"
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 262.1171)

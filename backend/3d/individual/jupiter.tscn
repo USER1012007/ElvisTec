@@ -79,6 +79,7 @@ script = ExtResource("5_dj7x1")
 
 [node name="CheckButton" type="CheckButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+text = "Mostrar informacion"
 
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2

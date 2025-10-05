@@ -77,11 +77,12 @@ offset_right = 290.0
 offset_bottom = 643.0
 script = ExtResource("5_v1rdc")
 
-[node name="CheckButton" type="CheckButton" parent="Control/VBoxContainer"]
+[node name="Mostrar informacion" type="CheckButton" parent="Control/VBoxContainer"]
 layout_mode = 2
+text = "Mostrar informacion"
 
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
 vertical_alignment = 2
 
-[connection signal="pressed" from="Control/VBoxContainer/CheckButton" to="Control/VBoxContainer" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Mostrar informacion" to="Control/VBoxContainer" method="_on_button_pressed"]

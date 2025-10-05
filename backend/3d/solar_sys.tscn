@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=31 format=3 uid="uid://ccqhnkceafusp"]
 
 [ext_resource type="Script" path="res://backend/3d/node3d.gd" id="1_4xd3j"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
@@ -25,6 +25,11 @@ sky_material = SubResource("PanoramaSkyMaterial_hsrjj")
 [sub_resource type="Environment" id="Environment_jgu04"]
 background_mode = 2
 sky = SubResource("Sky_kiuo5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqvct"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 0.5
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d68ol"]
 load_path = "res://.godot/imported/8k_sun.jpg-a734ab3b5c53270c580529b2a0ceb734.s3tc.ctex"
@@ -72,6 +77,14 @@ script = ExtResource("1_4xd3j")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jgu04")
+
+[node name="orbit_jupiter" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+polygon = PackedVector2Array(117, 2, 117, 0, 119, 0.01, 119, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_qqvct")
 
 [node name="sun" type="CSGSphere3D" parent="."]
 radius = 69.63

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dpl2gjxmg7g4t"]
 
-[ext_resource type="Texture2D" uid="uid://cqalj4kmxmh5n" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
+[ext_resource type="Texture2D" uid="uid://egw8bck5rpby" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
 [ext_resource type="Script" uid="uid://dmg8sg8rgvpap" path="res://frontend/texture_rect.gd" id="2_f22ye"]
 [ext_resource type="Script" uid="uid://bo27wk2nic5m5" path="res://frontend/scripts/Design_Button.gd" id="2_xwb8m"]
 [ext_resource type="Script" uid="uid://kfllmvbfceh" path="res://frontend/Desing_Button_index.gd" id="3_i1ms3"]
@@ -55,7 +55,7 @@ theme_override_constants/margin_top = 10
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
-text = "Planetas"
+text = "Cuerpos Celestes"
 script = ExtResource("2_xwb8m")
 
 [node name="sys_Solar" type="Button" parent="VBoxContainer2"]
@@ -71,7 +71,7 @@ metadata/scene = "solar_sys.tscn"
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
 theme_override_font_sizes/font_size = 36
-text = "Sistema a escala
+text = "Sistema Solar a escala
 "
 script = ExtResource("2_xwb8m")
 metadata/scene = "solar_sys_escala.tscn"
@@ -102,7 +102,7 @@ grow_vertical = 2
 [node name="Label" type="Label" parent="VBoxContainer3"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 26
-text = "Lista de planetas"
+text = "Lista de cuerpos celestes"
 horizontal_alignment = 1
 
 [node name="Sun" type="Button" parent="VBoxContainer3"]

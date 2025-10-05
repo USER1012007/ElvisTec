@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://nqpexnxs2ljm"]
+[gd_scene load_steps=10 format=3 uid="uid://nqpexnxs2ljm"]
 
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_gxwco"]
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
-[ext_resource type="Script" path="res://backend/3d/sun.gd" id="3_gxwco"]
+[ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="3_gxwco"]
 [ext_resource type="Script" uid="uid://drdxxr2site14" path="res://backend/3d/camera_3d.gd" id="3_jrhui"]
+[ext_resource type="Script" uid="uid://nwvtecqk0dv6" path="res://backend/3d/individual/control.gd" id="5_jrhui"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jrhui"]
 panorama = ExtResource("1_gxwco")
@@ -42,3 +43,29 @@ script = ExtResource("3_jrhui")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
 light_energy = 3.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_jrhui")
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 553.0
+offset_right = 191.0
+offset_bottom = 584.0
+text = "Mas Información"
+
+[node name="Label" type="Label" parent="Control"]
+visible = false
+layout_mode = 0
+offset_left = 928.0
+offset_top = 390.0
+offset_right = 1028.0
+offset_bottom = 413.0
+text = "testo prueba"
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_button_pressed"]

@@ -13,8 +13,8 @@ func _ready() -> void:
 		sphere = self
 	else:
 		sphere = self
-		print("✅ Planet:", planet_name, "| Sphere node:", sphere.name)
 
+# function made with IA
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		rotating = event.pressed

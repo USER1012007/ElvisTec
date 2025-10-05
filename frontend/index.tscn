@@ -150,6 +150,15 @@ text = "Saturno"
 script = ExtResource("2_xwb8m")
 metadata/scene = "saturn.tscn"
 
+[node name="Urano" type="Button" parent="VBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
+theme_override_font_sizes/font_size = 26
+text = "Urano
+"
+script = ExtResource("2_xwb8m")
+metadata/scene = "neptune.tscn"
+
 [node name="Neptune" type="Button" parent="VBoxContainer3"]
 layout_mode = 2
 theme_override_colors/font_hover_color = Color(0.49803922, 0.5686275, 0.6431373, 1)
@@ -216,6 +225,7 @@ script = ExtResource("3_i1ms3")
 [connection signal="pressed" from="VBoxContainer3/Mars" to="VBoxContainer3/Mars" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Jupiter" to="VBoxContainer3/Jupiter" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Saturn" to="VBoxContainer3/Saturn" method="on_sun_pressed"]
+[connection signal="pressed" from="VBoxContainer3/Urano" to="VBoxContainer3/Urano" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Neptune" to="VBoxContainer3/Neptune" method="on_sun_pressed"]
 [connection signal="pressed" from="VBoxContainer3/Return2" to="." method="_on_return_2_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]

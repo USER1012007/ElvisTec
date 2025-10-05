@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://deikbmtryavuc" path="res://assets/2k_uranus.jpg" id="1_ech4r"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_c14cy"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_akbvx"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_c14cy"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_c14cy"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_algqn"]
 albedo_texture = ExtResource("1_ech4r")
@@ -21,6 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Uranus" type="Node3D"]
+metadata/name = "uranus"
 
 [node name="Node3D" type="Node3D" parent="."]
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://b55cg32scrk5b"]
 
-[ext_resource type="Texture2D" path="res://assets/mars_9.ktx" id="1_3co4n"]
+[ext_resource type="Texture2D" uid="uid://qsuetdw03xds" path="res://assets/mars_9.ktx" id="1_3co4n"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_vnqrh"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_v1rdc"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_v1rdc"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_vnqrh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4xq6"]
@@ -21,10 +21,11 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Mars" type="Node3D"]
+metadata/name = "mars"
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="mars_9_ktx" type="CSGSphere3D" parent="Node3D"]
+[node name="mars" type="CSGSphere3D" parent="Node3D"]
 radius = 100.0
 radial_segments = 44
 rings = 22

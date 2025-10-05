@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c81jrdsuehcxw" path="res://assets/8k_sun.jpg" id="1_usyuv"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_25jue"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_am44p"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_25jue"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_25jue"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_am44p"]
 albedo_texture = ExtResource("1_usyuv")
@@ -21,10 +21,11 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Sun" type="Node3D"]
+metadata/name = "sun"
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="sun_ktx" type="CSGSphere3D" parent="Node3D"]
+[node name="sun" type="CSGSphere3D" parent="Node3D"]
 radius = 100.0
 radial_segments = 45
 rings = 22

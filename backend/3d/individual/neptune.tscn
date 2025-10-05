@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://d1bk5btwoyer" path="res://assets/2k_neptune.jpg" id="1_gxxb6"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_xg433"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_12fef"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_12fef"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_xg433"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sde0x"]
@@ -21,6 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Neptune" type="Node3D"]
+metadata/name = "neptune"
 
 [node name="Node3D" type="Node3D" parent="."]
 

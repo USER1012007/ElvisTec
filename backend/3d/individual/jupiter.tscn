@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://da0r2twyp5chs" path="res://assets/8k_jupiter.jpg" id="1_x8gqh"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_nxswx"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_dj7x1"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_dj7x1"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="4_nxswx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f1x4m"]
@@ -21,6 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Jupiter" type="Node3D"]
+metadata/name = "jupiter"
 
 [node name="Node3D" type="Node3D" parent="."]
 

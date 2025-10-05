@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baca6h31o0if6" path="res://assets/earth.jpg" id="1_oy8y3"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="3_gxwco"]
 [ext_resource type="Script" uid="uid://nwvtecqk0dv6" path="res://backend/3d/individual/control.gd" id="5_jrhui"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="5_sunyn"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="5_sunyn"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_jrhui"]
 panorama = ExtResource("1_gxwco")
@@ -35,6 +35,7 @@ radial_segments = 44
 rings = 22
 material = SubResource("StandardMaterial3D_gxwco")
 script = ExtResource("3_gxwco")
+metadata/planet = "earth"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 286)
@@ -46,6 +47,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("5_jrhui")
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0

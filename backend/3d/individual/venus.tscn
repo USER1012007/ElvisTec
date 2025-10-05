@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bie7erlqf4ofx" path="res://assets/venus.jpg" id="1_chp2w"]
 [ext_resource type="Script" uid="uid://bgnxqbg0bm2yi" path="res://backend/3d/sun.gd" id="2_1cmx1"]
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="3_ajubd"]
-[ext_resource type="Script" uid="uid://btq1vhkhpl5ie" path="res://backend/3d/return_index.gd" id="4_1cmx1"]
+[ext_resource type="Script" path="res://backend/3d/return_index.gd" id="4_1cmx1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajubd"]
 albedo_texture = ExtResource("1_chp2w")
@@ -21,6 +21,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="venus" type="Node3D"]
+metadata/name = "venus"
 
 [node name="Node3D" type="Node3D" parent="."]
 

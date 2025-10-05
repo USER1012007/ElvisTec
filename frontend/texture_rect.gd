@@ -72,5 +72,5 @@ func _on_close_app_pressed() -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://frontend/main_scene.tscn")
+	get_tree().change_scene_to_file("res://backend/3d/solar_sys.tscn")
 	pass # Replace with function body.

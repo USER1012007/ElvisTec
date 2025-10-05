@@ -15,12 +15,12 @@ func _on_button_pressed() -> void:
 	var target_name = get_parent().get_parent().get_meta(metadata_key)
 	print("target_name: " + target_name)
 	if target_name == null:
-		push_error("No metadata '%s' found on parent" % metadata_key)
+		push_error("No metadata '%s' encontrada" % metadata_key)
 		return
 
 	var file_path = "%s%s.txt" % [file_folder, target_name]
 	if not FileAccess.file_exists(file_path):
-		push_error("File not found: %s" % file_path)
+		push_error("arhivo inexistente: %s" % file_path)
 		return
 
 	var file = FileAccess.open(file_path, FileAccess.READ)

@@ -79,6 +79,7 @@ script = ExtResource("5_83nam")
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
+visible = false
 layout_mode = 2
 vertical_alignment = 2
 

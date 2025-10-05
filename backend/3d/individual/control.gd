@@ -6,12 +6,6 @@ extends Control
 @export var file_folder: String = "res://backend/3d/individual/info/"
 
 func _ready() -> void:
-	label.visible = false
-
-	
-func _on_button_pressed() -> void:
-	label.visible = !label.visible
-	print(label.visible)
 	var target_name = get_parent().get_parent().get_meta(metadata_key)
 	print("target_name: " + target_name)
 	if target_name == null:
@@ -26,3 +20,11 @@ func _on_button_pressed() -> void:
 	var file = FileAccess.open(file_path, FileAccess.READ)
 	label.text = file.get_as_text()
 	file.close()
+	
+func _on_button_pressed() -> void:
+	label.visible = !label.visible
+
+func _input(event) -> void:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_E:
+			label.visible = !label.visible

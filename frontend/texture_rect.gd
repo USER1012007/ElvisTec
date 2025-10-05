@@ -11,9 +11,9 @@ var dir := Vector2.ZERO
 
 func _ready():
 	if bg.texture:
-		bg.size = bg.texture.get_size()   # usa "size" en lugar de rect_size
+		bg.size = bg.texture.get_size()   
 
-	# Anclar al topleft
+	
 	bg.anchor_left = 0
 	bg.anchor_top = 0
 	bg.anchor_right = 0
@@ -21,7 +21,7 @@ func _ready():
 
 	dir = start_direction.normalized()
 
-	# Ajustar eje según tamaño de la textura vs padre
+
 	if bg.size.x <= size.x:
 		horizontal = false
 	if bg.size.y <= size.y:
@@ -41,8 +41,8 @@ func _process(delta):
 	_check_and_bounce()
 
 func _check_and_bounce():
-	var area = size                # tamaño del Control padre
-	var tex_size = bg.size          # tamaño del TextureRect
+	var area = size                
+	var tex_size = bg.size          
 
 	var min_x = min(area.x - tex_size.x, 0)
 	var max_x = 0
@@ -68,9 +68,9 @@ func _check_and_bounce():
 
 func _on_close_app_pressed() -> void:
 	get_tree().quit()
-	pass # Replace with function body.
+	pass 
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://backend/3d/solar_sys.tscn")
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://frontend/main_scene.tscn")
+	pass 

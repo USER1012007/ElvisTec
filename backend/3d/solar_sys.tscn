@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://ccqhnkceafusp"]
+[gd_scene load_steps=39 format=3 uid="uid://ccqhnkceafusp"]
 
 [ext_resource type="Texture2D" uid="uid://x3l840233hoi" path="res://assets/stars_milky_way.jpg" id="1_b5cax"]
 [ext_resource type="Script" uid="uid://cotd4n7vyboj5" path="res://backend/3d/sun_real.gd" id="2_qkbaj"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://b16y0iutjloej" path="res://assets/saturn_rings.png" id="11_qqvct"]
 [ext_resource type="Script" uid="uid://ltvwbot6gvic" path="res://backend/3d/player.gd" id="12_w2d3l"]
 [ext_resource type="Script" path="res://backend/3d/return_index.gd" id="13_qkbaj"]
+[ext_resource type="Script" uid="uid://clsab8rplvroo" path="res://backend/3d/orbitas_toggle.gd" id="15_qqvct"]
+[ext_resource type="Script" uid="uid://bahabp5jytgwi" path="res://backend/3d/animation_toggle.gd" id="16_l3t50"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_hsrjj"]
 panorama = ExtResource("1_b5cax")
@@ -25,9 +27,51 @@ sky_material = SubResource("PanoramaSkyMaterial_hsrjj")
 background_mode = 2
 sky = SubResource("Sky_kiuo5")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqvct"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usd4t"]
 emission_enabled = true
-emission = Color(1, 1, 1, 1)
+emission = Color(0.74516374, 0.7451638, 0.74516374, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lb067"]
+albedo_color = Color(1, 1, 0, 1)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bqcch"]
+albedo_color = Color(0, 0.2, 0.96862745, 1)
+emission_enabled = true
+emission = Color(0, 0, 0.87058824, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hmnf6"]
+albedo_color = Color(1, 0, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqvct"]
+albedo_color = Color(1, 0.4392157, 0, 1)
+emission_enabled = true
+emission = Color(0.99999064, 0.46783364, 0.13274387, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pwie"]
+albedo_color = Color(0.54901963, 0.5764706, 0.13333334, 1)
+emission_enabled = true
+emission = Color(0.18616307, 0.42158738, 0.25508374, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b2o35"]
+albedo_color = Color(0.5411765, 0.69803923, 0.8039216, 1)
+emission_enabled = true
+emission = Color(0.52156866, 0.6666667, 0.7647059, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c8yug"]
+albedo_color = Color(0.30588236, 0.37254903, 0.65882355, 1)
+emission_enabled = true
+emission = Color(0.24313726, 0.2509804, 0.42352942, 1)
 emission_energy_multiplier = 0.5
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d68ol"]
@@ -76,6 +120,42 @@ albedo_texture = ExtResource("10_hmnf6")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jgu04")
 
+[node name="orbit_mercury" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(84.921, 2, 84.921, 0, 86.921, 0.01, 86.921, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_usd4t")
+
+[node name="orbit_venus" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(90.679, 2, 90.679, 0, 92.679, 0.01, 92.679, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_lb067")
+
+[node name="orbit_earth" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(96.612, 2, 96.612, 0, 98.612, 0.01, 98.612, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_bqcch")
+
+[node name="orbit_mars" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(102.347, 2, 102.347, 0, 104.347, 0.01, 104.347, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_hmnf6")
+
 [node name="orbit_jupiter" type="CSGPolygon3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 visible = false
@@ -84,6 +164,33 @@ mode = 1
 spin_degrees = 360.0
 spin_sides = 64
 material = SubResource("StandardMaterial3D_qqvct")
+
+[node name="orbit_saturn" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(136.407, 2, 136.407, 0, 134.407, 0.01, 134.407, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_5pwie")
+
+[node name="orbit_uranus" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(145.652, 2, 145.652, 0, 146.652, 0.01, 147.652, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_b2o35")
+
+[node name="orbit_neptuno" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+visible = false
+polygon = PackedVector2Array(155.449, 2, 155.449, 0, 157.449, 0.01, 157.449, 2)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 64
+material = SubResource("StandardMaterial3D_c8yug")
 
 [node name="sun" type="CSGSphere3D" parent="."]
 radius = 69.63
@@ -138,7 +245,7 @@ script = ExtResource("2_w2d3l")
 metadata/orbit_speed = 13.1
 
 [node name="saturn" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 134.40685, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.24133, 0, 0)
 radius = 2.476
 radial_segments = 44
 rings = 22
@@ -155,7 +262,7 @@ spin_sides = 32
 material = SubResource("StandardMaterial3D_l3t50")
 
 [node name="uranus" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.50594, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 146.65166, 0, 0)
 radius = 2.556
 radial_segments = 44
 rings = 22
@@ -164,7 +271,7 @@ script = ExtResource("2_w2d3l")
 metadata/orbit_speed = 6.8
 
 [node name="neptuno" type="CSGSphere3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 154.50793, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 156.44853, 0, 0)
 radius = 2.476
 radial_segments = 44
 rings = 22
@@ -194,11 +301,29 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="CanvasLayer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 26
 text = "Volver
 "
 script = ExtResource("13_qkbaj")
+
+[node name="CheckButton" type="CheckButton" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+text = "Órbitas"
+script = ExtResource("15_qqvct")
+
+[node name="CheckButton2" type="CheckButton" parent="CanvasLayer/Control/VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_font_sizes/font_size = 26
+button_pressed = true
+text = "Animación"
+script = ExtResource("16_l3t50")

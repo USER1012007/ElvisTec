@@ -104,8 +104,12 @@ script = ExtResource("4_3v8fw")
 
 [node name="Popup2" type="Popup" parent="."]
 oversampling_override = 1.0
+<<<<<<< HEAD
+size = Vector2i(212, 324)
+=======
 size = Vector2i(212, 429)
 visible = true
+>>>>>>> 6d073379cb54ea6149f92fc48e5e4a418a6b55b0
 script = ExtResource("4_jheov")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Popup2"]

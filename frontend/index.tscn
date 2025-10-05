@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpl2gjxmg7g4t"]
+[gd_scene load_steps=4 format=3 uid="uid://dpl2gjxmg7g4t"]
 
-[ext_resource type="Texture2D" uid="uid://cqalj4kmxmh5n" path="res://assets/fronted_img/galaxia.jpg" id="1_7fspv"]
+[ext_resource type="Texture2D" uid="uid://cvlcfxowmfuq7" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
+[ext_resource type="Script" uid="uid://dmg8sg8rgvpap" path="res://frontend/texture_rect.gd" id="2_f22ye"]
+[ext_resource type="Script" uid="uid://kfllmvbfceh" path="res://frontend/Desing_Button_index.gd" id="3_i1ms3"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -9,18 +11,55 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_f22ye")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
-anchors_preset = -1
-anchor_left = -2.2800002
-anchor_top = -1.6790001
-anchor_right = 4.4370003
-anchor_bottom = 3.0170002
-offset_left = -15289.439
-offset_top = -149.00793
-offset_right = 497.57568
-offset_bottom = 814.9839
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -15787.016
+offset_bottom = 1080.0
+grow_horizontal = 0
+texture = ExtResource("1_f22ye")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.0
+offset_right = 209.0
+offset_bottom = 435.0
 grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_7fspv")
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Elvis Tec"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 350)
+layout_mode = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Iniciar"
+script = ExtResource("3_i1ms3")
+
+[node name="Close_App" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Cerrar aplicación
+"
+script = ExtResource("3_i1ms3")
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Close_App" to="." method="_on_close_app_pressed"]

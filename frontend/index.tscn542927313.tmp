@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpl2gjxmg7g4t"]
+
+[ext_resource type="Texture2D" uid="uid://cvlcfxowmfuq7" path="res://assets/fronted_img/galaxy.jpg" id="1_f22ye"]
+[ext_resource type="Script" uid="uid://dmg8sg8rgvpap" path="res://frontend/texture_rect.gd" id="2_f22ye"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_f22ye")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -6340.0
+offset_bottom = 1080.0
+grow_horizontal = 0
+texture = ExtResource("1_f22ye")
+stretch_mode = 6
